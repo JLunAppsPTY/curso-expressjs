@@ -13,14 +13,14 @@
   "description": "curso express.js",
   "main": "app.js",
   "scripts": {
-    "dev": "node --watch app.js",
-    "start": "node app.js",
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "['expressjs']"
   ],
-  "author": "Oscar Barajas <oscar@platzi.com>",
+  "author": "Julio Luna <julioluna1404@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "prisma": "^6.16.1"

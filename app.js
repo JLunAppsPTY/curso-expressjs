@@ -7,11 +7,11 @@ const prisma = new PrismaClient();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
-const authenticateToken = require('./middlewares/auth');
+const authenticateToken = require('./src/middlewares/auth');
 
-const LoggerMiddleware = require('./middlewares/logger');
-const errorHandler = require('./middlewares/errorHandler');
-const { validateUser } = require('./utils/validation');
+const LoggerMiddleware = require('./src/middlewares/logger');
+const errorHandler = require('./src/middlewares/errorHandler');
+const { validateUser } = require('./src/utils/validation');
 
 const bodyParser = require('body-parser');
 
@@ -210,7 +210,6 @@ app.post('/login', async (req, res, next) => {
   res.json({ token });
   next();
 });
-
 
 app.listen(PORT, () => {
   console.log(`Servidor: http://localhost:${PORT}`);
